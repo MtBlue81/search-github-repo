@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Webpack App</title>
+    <style type="text/css">
+      body {
+        background-color:azure;
+        margin: 0;
+        padding: 0;
+        height: 100%;
+      }
+      .mount-container {
+        width: 60%;
+        margin: 0px auto;
+        padding: 8px;
+        background-color:white;
+        height: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="mount-container">
+      <div id="app" />
+    </div>
+    <script>
+      window.onload = function() {
+        renderSearchRepo('app', {
+          onClickLink: function(href) {
+            alert(href);
+          },
+          lang: 'js',
+          repo: 'jquery/jquery',
+        });
+      };
+    </script>
+  </body>
+</html>
